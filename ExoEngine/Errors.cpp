@@ -1,5 +1,8 @@
 #include "Errors.h"
 
+namespace exo
+{
+
 extern void fatalError(std::string errorString)
 {
 	std::cout << errorString << std::endl;
@@ -38,4 +41,6 @@ extern void fatalMeshError(std::string errorString, std::string fileName)
 	std::cin >> t;
 	SDL_Quit();
 	exit(69);
+}
+
 }

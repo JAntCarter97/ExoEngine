@@ -4,6 +4,9 @@
 #include <GL/glew.h>
 #include <string>
 
+namespace exo
+{
+
 // Used in Poll Events in processInput()
 enum class ExoStatus { ENGAGE, EXIT };
 
@@ -32,3 +35,4 @@ private:
 	SDL_GLContext m_glContext;
 };
 
+}

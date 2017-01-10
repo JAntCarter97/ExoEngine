@@ -3,6 +3,9 @@
 #include <vector>
 
 
+namespace exo
+{
+
 Mesh::Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indices, unsigned int numIndices) : m_drawCount(numIndices)
 {
 	IndexedModel model;
@@ -78,5 +81,7 @@ void Mesh::InitMesh(const IndexedModel& model)
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.indices.size() * sizeof(model.indices[0]), &model.indices[0], GL_STATIC_DRAW);
 
 	glBindVertexArray(0);
+
+}
 
 }

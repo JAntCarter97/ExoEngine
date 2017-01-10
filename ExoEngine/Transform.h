@@ -3,6 +3,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 
+namespace exo
+{
+
 class Transform
 {
 public:
@@ -49,3 +52,5 @@ private:
 
 };
 
+
+}

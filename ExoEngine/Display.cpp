@@ -13,6 +13,9 @@
 #define WIDTH 800
 #define HEIGHT 600
 
+namespace exo
+{
+
 Display::Display(int width, int height, const std::string& title) : m_window(nullptr), m_screenWidth(width), m_screenHeight(height), m_currentStatus(ExoStatus::ENGAGE), m_title(title)
 {
 
@@ -149,5 +152,7 @@ void Display::processInput()
 				break;
 		}
 	}
+
+}
 
 }

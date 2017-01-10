@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 
+namespace exo
+{
+
 class Texture
 {
 
@@ -21,3 +24,4 @@ private:
 
 };
 
+}

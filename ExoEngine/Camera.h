@@ -3,6 +3,9 @@
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 
+namespace exo
+{ 
+
 class Camera
 {
 public:
@@ -27,3 +30,5 @@ private:
 	glm::vec3 m_forward;
 	glm::vec3 m_up;
 };
+
+}

@@ -6,6 +6,9 @@
 #include "Transform.h"
 #include "Camera.h"
 
+namespace exo
+{
+
 class Shader
 {
 
@@ -29,3 +32,4 @@ private:
 
 };
 
+}

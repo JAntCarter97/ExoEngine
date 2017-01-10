@@ -119,6 +119,7 @@
   <ItemGroup>
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Errors.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="obj_loader.cpp" />
@@ -130,6 +131,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Errors.h" />
+    <ClInclude Include="InputManager.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="obj_loader.h" />
     <ClInclude Include="Shader.h" />

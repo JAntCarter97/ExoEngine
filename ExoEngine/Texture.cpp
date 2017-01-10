@@ -3,6 +3,9 @@
 #include "stb_image.h"
 #include <cassert>
 
+namespace exo
+{
+
 Texture::Texture(const std::string& fileName)
 {
 	int width, height, numComponents;
@@ -41,4 +44,6 @@ void Texture::Bind()
 
 	//glActiveTexture(GL_TEXTURE0 + unit);
 	//glBindTexture(GL_TEXTURE_2D, m_texture);
+}
+
 }

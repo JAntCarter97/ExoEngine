@@ -6,6 +6,9 @@
 #include <string>
 #include "obj_loader.h"
 
+namespace exo
+{
+
 /********* VERTEX DATA CLASS **********/
 class Vertex
 {
@@ -64,3 +67,4 @@ private:
 
 };
 
+}
