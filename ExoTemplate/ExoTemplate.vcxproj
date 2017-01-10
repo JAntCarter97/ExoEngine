@@ -69,11 +69,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)deps/include/;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ExoEngine/</IncludePath>
+    <IncludePath>$(SolutionDir)deps/include/;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)</IncludePath>
     <LibraryPath>$(SolutionDir)deps/lib/;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(SolutionDir)Debug/</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)deps/include/;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)ExoEngine/</IncludePath>
+    <IncludePath>$(SolutionDir)deps/include/;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)</IncludePath>
     <LibraryPath>$(SolutionDir)deps/lib/;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(SolutionDir)Release/</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

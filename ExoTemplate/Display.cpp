@@ -1,10 +1,10 @@
 #include "Display.h"
-#include "ExoErrors.h"
-#include "Shader.h"
-#include "Mesh.h"
-#include "Texture.h"
-#include "Transform.h"
-#include "Camera.h"
+#include <ExoEngine/ExoErrors.h>
+#include <ExoEngine/Shader.h>
+#include <ExoEngine/Mesh.h>
+#include <ExoEngine/Texture.h>
+#include <ExoEngine/Transform.h>
+#include <ExoEngine/Camera.h>
 
 #include <iostream>
 #include <string>
@@ -13,8 +13,7 @@
 #define WIDTH 800
 #define HEIGHT 600
 
-namespace exo
-{
+
 
 Display::Display(int width, int height, const std::string& title) : m_window(nullptr), m_screenWidth(width), m_screenHeight(height), m_currentStatus(ExoStatus::ENGAGE), m_title(title)
 {
@@ -51,20 +50,20 @@ void Display::initAll()
 	m_window = SDL_CreateWindow(m_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, m_screenWidth, m_screenHeight, SDL_WINDOW_OPENGL);
 	if (m_window == nullptr)
 	{
-		fatalError("SDL Window could not be created!");
+		exo::fatalError("SDL Window could not be created!");
 	}
 
 	// Made the GL context a private member variable because I want to use it in the Display destructor
 	m_glContext = SDL_GL_CreateContext(m_window);
 	if (m_glContext == nullptr)
 	{
-		fatalError("SDL_GL context could not be created!");
+		exo::fatalError("SDL_GL context could not be created!");
 	}
 
 	GLenum status = glewInit();
 	if (status != GLEW_OK)
 	{
-		fatalError("Failed to Initialize GLEW");
+		exo::fatalError("Failed to Initialize GLEW");
 	}
 
 	glEnable(GL_DEPTH_TEST);
@@ -90,21 +89,21 @@ void Display::engineUpdate()
 	//unsigned int indices[] = { 0, 1, 2 };
 
 	//Mesh mesh(vertices, sizeof(vertices) / sizeof(vertices[0]), indices, sizeof(indices)/sizeof(indices[0]));
-	Mesh mesh2("../ExoEngine/resources/Monkey3.obj");
+	exo::Mesh mesh2("../ExoEngine/resources/Monkey3.obj");
 
 	// Temp Shader init handling
-	Shader shader("../ExoEngine/Shaders/basicShader");
+	exo::Shader shader("../ExoEngine/Shaders/basicShader");
 	shader.Bind();
 	// Temp Texture init handling !!!!!!!FACTOR THIS OUT!!!!!!!!
 	//Texture texture("Textures/Brick/bricks.jpg");
 	//Texture texture("Textures/Brick/stoneWall.png");
 	//Texture texture("Textures/Brick/MayanStone.png");
-	Texture texture("../ExoEngine/Textures/Brick/Cobblestone.png");
+	exo::Texture texture("../ExoEngine/Textures/Brick/Cobblestone.png");
 
 	//texture.Bind();
 
-	Camera camera(glm::vec3(0.0f, 0.0f, -2.0f), 70.0f, (float)WIDTH / (float)HEIGHT, 0.01f, 1000.0f);
-	Transform transform;
+	exo::Camera camera(glm::vec3(0.0f, 0.0f, -2.0f), 70.0f, (float)WIDTH / (float)HEIGHT, 0.01f, 1000.0f);
+	exo::Transform transform;
 
 	float counter = 0.0f;
 
@@ -155,4 +154,3 @@ void Display::processInput()
 
 }
 
-}
