@@ -1,5 +1,5 @@
 #include "Display.h"
-#include "Errors.h"
+#include "ExoErrors.h"
 #include "Shader.h"
 #include "Mesh.h"
 #include "Texture.h"
@@ -90,16 +90,16 @@ void Display::engineUpdate()
 	//unsigned int indices[] = { 0, 1, 2 };
 
 	//Mesh mesh(vertices, sizeof(vertices) / sizeof(vertices[0]), indices, sizeof(indices)/sizeof(indices[0]));
-	Mesh mesh2("resources/Monkey3.obj");
+	Mesh mesh2("../ExoEngine/resources/Monkey3.obj");
 
 	// Temp Shader init handling
-	Shader shader("Shaders/basicShader");
+	Shader shader("../ExoEngine/Shaders/basicShader");
 	shader.Bind();
 	// Temp Texture init handling !!!!!!!FACTOR THIS OUT!!!!!!!!
 	//Texture texture("Textures/Brick/bricks.jpg");
 	//Texture texture("Textures/Brick/stoneWall.png");
 	//Texture texture("Textures/Brick/MayanStone.png");
-	Texture texture("Textures/Brick/Cobblestone.png");
+	Texture texture("../ExoEngine/Textures/Brick/Cobblestone.png");
 
 	//texture.Bind();
 

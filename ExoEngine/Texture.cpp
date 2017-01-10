@@ -1,5 +1,5 @@
 #include "Texture.h"
-#include "Errors.h"
+#include "ExoErrors.h"
 #include "stb_image.h"
 #include <cassert>
 

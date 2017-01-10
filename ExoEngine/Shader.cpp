@@ -1,5 +1,5 @@
 #include "Shader.h"
-#include "Errors.h"
+#include "ExoErrors.h"
 
 #include <fstream>
 

@@ -9,4 +9,3 @@ int main(int argc, char** argv)
 	
 	return 0;
 }
-//TODO: abstract engine out and create a sandbox project to test
